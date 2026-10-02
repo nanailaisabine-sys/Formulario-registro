@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/styles.css"
+</head>
+<body>
+    <main>
+        <h1>Registro de taller de programacion</h1>
+        <p>Llena tus datos para apartar tu lugar</p>
+        <form method="get">
+            <fieldset>
+                <legend>Datos personales</legend>
+            <div>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name"
+                required minlength="3">
+            </div>
+            <div>
+                <label for="usuario">Nombre del usuario</label>
+                <input type="text" id="usuario" name="usuario"
+                required minlength="4" required maxlength="20"
+                pattern="[a-z0-9_]+" title="Solo minúsculas, números y guion bajo">
+            </div>
+            <div>
+                <label for="correo">Correo electronico</label>
+                <input type="email" id="correo" name="correo"
+                placeholder="tu@correo.com" autocomplete="email" required>
+            </div>
+            <div>
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono"
+            placeholder="55 7670 0185" autocomplete="tel"
+            required pattern="[0-9]{10}" title="10 digitos, sin espacios"> 
+            </div>
+            <div>
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="nacimiento" name="nacimiento"
+                required max="2026-10-01">
+            </div>
+            <div>
+            <label for="semestre">Semestre que cursas</label>
+            <input type="number" id="semestre" name="semestre" min="1" max="8" required>
+            </div>
+            </fieldset>
+            <div>
+                <fieldset>
+                    <legend>Datos de la cuenta</legend>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password"
+                autocomplete="new-password" required minlength="8"
+                aria-describedby="password-ayuda">
+                <small id="password-ayuda">Minimo 8 caracteres</small>
+            </div>
+            <div>
+                <label for="Github">Github</label>
+                <input type="url" id="github" name="github"
+                placeholder="https://github.com/tu-usuario">
+
+            </div>
+            </fieldset>
+            <fieldset>
+                <legend>Preferencias del taller</legend>
+                <div>
+                    <label for="nivel">Tu nivel de programacion</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="">Elige una opcion</option>
+                        <option value="Principiante">Principiante</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Avanzado">Avanzado</option>
+                    </select>
+
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Horario preferido</legend>
+                <div>
+                    <input type="radio" id="matutino" name="horario" value="matutino" required>
+                    <label for="matutino">Matutino</label>
+
+                </div>
+                <div>
+                    <input type="radio" id="vespertino" name="horario" value="vespertino">
+                    <label for="vespertino">Vespertino</label>
+                </div>
+                <div>
+                    <input type="radio" id="sabatino" name="horario" value="sabatino">
+                    <label for="sabatino">Sabatino</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Temas que te interesan</legend>
+                <div>
+                    <input type="checkbox" id="tema-html" name="temas" value="html">
+                    <label for="tema-html">HTML Y CSS</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tema-js" name="temas" value="javascript">
+                    <label for="tema-js">JavaScript</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tema-python" name="temas" value="python">
+                    <label for="tema-python">Python</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="comentarios">¿Que esperas aprender?</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+
+
+            </fieldset>
+            <div>
+                <input type="checkbox" id="privacidad" name="privacidad" required>
+                <label for="privacidad">Acepto el aviso de privacidad</label>
+            </div>
+
+        
+
+            <button type="submit">Registrarme</button>
+        </form>
+    </main>
+</body>
+</html>
